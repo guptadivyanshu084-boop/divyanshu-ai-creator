@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101126">
+<title>Divyanshu AI Creator</title>
+<style>
+:root{--bg:#0b0c1a;--panel:#15172b;--panel2:#1b1e36;--text:#f7f7ff;--muted:#aeb3d0;--pink:#ff4fb3;--blue:#7c7bff;--cyan:#56e0dc;--line:#303451}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#25204a 0,#0b0c1a 55%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:1050px;margin:auto;padding:18px}.hero{padding:26px 20px;border:1px solid #414168;border-radius:24px;background:linear-gradient(130deg,#26204b,#15172c 60%,#142c3a);box-shadow:0 15px 40px #0005}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--blue));display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 6px 20px #7c7bff55}
+h1{font-size:clamp(27px,5vw,42px);line-height:1.1;margin:0}h1 span{background:linear-gradient(90deg,#ff6cc2,#8c9dff,#63eee4);color:transparent;background-clip:text}.tag{color:var(--muted);margin:12px 0 0}.badge{display:inline-block;border:1px solid #4a4c75;border-radius:999px;padding:5px 10px;font-size:12px;color:#d6d7ff;margin-top:13px}
+nav{display:flex;gap:8px;overflow:auto;padding:15px 0;position:sticky;top:0;background:#0b0c1aeb;backdrop-filter:blur(10px);z-index:4}nav button{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:10px 13px;font-weight:650}nav button.active{background:linear-gradient(100deg,#6d4cff,#e23b9e);border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#17192e,#111324);border:1px solid var(--line);border-radius:19px;padding:18px;margin-bottom:14px}.card h2{font-size:20px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 15px}.icon{font-size:22px;margin-right:7px}
+label{display:block;font-size:13px;color:#d6d8f1;margin:12px 0 5px}input,select,textarea{width:100%;background:#0c0e1c;border:1px solid #353958;color:var(--text);border-radius:11px;padding:12px;font:inherit;outline:none}textarea{min-height:94px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--blue)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{border:0;border-radius:12px;padding:11px 15px;color:white;background:linear-gradient(100deg,#7254ff,#d83caa);font-weight:750;margin-top:12px;cursor:pointer}.btn.secondary{background:#282b48;border:1px solid #44496e}.btn.small{padding:7px 10px;font-size:12px;margin:4px 4px 0 0}.output{white-space:pre-wrap;background:#0b0d1a;border:1px dashed #45496e;padding:14px;border-radius:12px;min-height:60px;margin-top:12px;overflow-wrap:anywhere}.muted{color:var(--muted);font-size:12px}.tool{display:none}.tool.active{display:block}.feature{padding:13px;border:1px solid var(--line);border-radius:14px;background:#131529}.feature strong{display:block;margin-bottom:4px}.feature span{font-size:13px;color:var(--muted)}.items{display:grid;gap:10px}.item{padding:12px;border-radius:12px;border:1px solid var(--line);background:#101225;overflow-wrap:anywhere}.item a{color:#8cebe7}.notice{border-left:3px solid #ffb35c;background:#292317;color:#f9dfb2;border-radius:8px;padding:11px 12px;font-size:12px;margin-top:13px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px 8px}.empty{color:var(--muted);font-size:13px;padding:8px}
+@media(max-width:650px){.wrap{padding:12px}.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.hero{padding:21px 16px}.card{padding:15px}nav{margin:0 -2px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="brand"><div class="logo">D</div><div><h1><span>Divyanshu AI Creator</span></h1><div class="muted">Create • Imagine • Share</div></div></div>
+  <p class="tag">Posters ke prompts, shayari, Reels scripts, news poster text aur apne links — sab ek hi mobile-friendly jagah par.</p>
+  <span class="badge">✨ Free starter studio · Phone friendly</span>
+</header>
+<nav id="nav">
+<button class="active" data-tab="home">🏠 Home</button><button data-tab="poster">🎨 Poster</button><button data-tab="shayari">✍️ Shayari</button><button data-tab="reels">🎬 Reels</button><button data-tab="news">📰 News Poster</button><button data-tab="links">🔗 My Links</button><button data-tab="saved">📚 Notebook</button>
+</nav>
+<section id="home" class="tool active">
+ <div class="grid">
+  <div class="feature"><strong>🎨 AI Poster Prompt Maker</strong><span>Festival, news, attitude, nature aur photo-edit prompts taiyar karein.</span></div>
+  <div class="feature"><strong>✍️ Shayari & Captions</strong><span>Short, shareable lines aur social captions ke ideas.</span></div>
+  <div class="feature"><strong>🎬 Reel Script Assistant</strong><span>Hook, scene plan, voiceover aur ending text.</span></div>
+  <div class="feature"><strong>📰 News Poster Draft</strong><span>Facts aapke diye hue text se organize karein; publish se pehle verify karein.</span></div>
+  <div class="feature"><strong>🔗 My Links</strong><span>Apne product ya social links save karein aur open karein.</span></div>
+  <div class="feature"><strong>📚 Prompt Notebook</strong><span>Apne banaye prompts ko isi browser mein save karein.</span></div>
+ </div>
+ <div class="card"><h2>👋 Welcome, Creator!</h2><p class="sub">Start karne ke liye upar koi section choose karein.</p><button class="btn" onclick="go('poster')">Poster prompt banao →</button> <button class="btn secondary" onclick="go('shayari')">Shayari likho</button>
+ <div class="notice">Important: Ye free starter website hai. Is version mein real AI API connected nahi hai, isliye ye khud image/video generate ya live AI chat nahi karta. Actual AI generation ke liye secure backend/API connection chahiye. Apni API key kabhi public HTML mein mat daalein.</div></div>
+</section>
+<section id="poster" class="tool">
+ <div class="card"><h2>🎨 Poster Prompt Maker</h2><p class="sub">Details bharein aur image generator mein use karne layak prompt banayein.</p>
+ <label>Poster kis baare mein hai?</label><input id="pTopic" placeholder="Jaise: Navratri, birthday, nature photo edit">
+ <div class="row"><div><label>Style</label><select id="pStyle"><option>Cinematic realistic</option><option>3D festive poster</option><option>Professional DSLR photo edit</option><option>Breaking news graphic</option><option>Minimal aesthetic</option><option>Devotional traditional</option></select></div><div><label>Ratio</label><select id="pRatio"><option>9:16 Instagram Story</option><option>4:5 Instagram Post</option><option>1:1 Square</option><option>16:9 YouTube</option></select></div></div>
+ <label>Poster par exact text</label><textarea id="pText" placeholder="Yahan bilkul sahi spelling ke saath text likhein"></textarea>
+ <label>Extra instructions</label><textarea id="pExtra" placeholder="Jaise: face same rahe, objects na badlein, text readable ho"></textarea>
+ <button class="btn" onclick="makePoster()">Prompt banao</button><div class="output" id="pOut">Aapka prompt yahan dikhega…</div><button class="btn secondary" onclick="copyText('pOut')">Copy prompt</button><button class="btn secondary" onclick="saveOutput('Poster Prompt','pOut')">Notebook mein save</button></div>
+</section>
+<section id="shayari" class="tool">
+ <div class="card"><h2>✍️ Shayari & Caption Maker</h2><p class="sub">Mood aur topic choose karke short line ideas banayein.</p>
+ <div class="row"><div><label>Mood</label><select id="sMood"><option>Attitude</option><option>Sad but strong</option><option>Motivational</option><option>Romantic</option><option>Friendship</option><option>Village life</option><option>Devotional</option></select></div><div><label>Length</label><select id="sLen"><option>Short</option><option>2 lines</option><option>Caption</option></select></div></div>
+ <label>Kis baare mein?</label><input id="sTopic" placeholder="Jaise: self-respect, kisan, dosti">
+ <button class="btn" onclick="makeShayari()">Ideas banao</button><div class="output" id="sOut">Aapke ideas yahan dikhenge…</div><button class="btn secondary" onclick="copyText('sOut')">Copy</button><button class="btn secondary" onclick="saveOutput('Shayari / Caption','sOut')">Notebook mein save</button>
+ <p class="muted">Ye built-in creative suggestions hain, live AI response nahi.</p></div>
+</section>
+<section id="reels" class="tool">
+ <div class="card"><h2>🎬 Reel Script Maker</h2><p class="sub">Short video ke liye hook, scene ideas aur voiceover draft.</p>
+ <label>Reel topic</label><input id="rTopic" placeholder="Jaise: village vlog, festival, nature">
+ <div class="row"><div><label>Duration</label><select id="rDur"><option>15 seconds</option><option>30 seconds</option><option>45 seconds</option><option>60 seconds</option></select></div><div><label>Style</label><select id="rStyle"><option>Emotional</option><option>Funny</option><option>Informative</option><option>Cinematic</option><option>Motivational</option></select></div></div>
+ <label>Extra details (optional)</label><textarea id="rExtra" placeholder="Location, people, scene ya message"></textarea>
+ <button class="btn" onclick="makeReel()">Script banao</button><div class="output" id="rOut">Aapki script yahan dikhegi…</div><button class="btn secondary" onclick="copyText('rOut')">Copy</button><button class="btn secondary" onclick="saveOutput('Reel Script','rOut')">Notebook mein save</button></div>
+</section>
+<section id="news" class="tool">
+ <div class="card"><h2>📰 News Poster Draft</h2><p class="sub">News ki di hui details ko poster layout mein arrange karein. Koi fact khud se add nahi kiya jayega.</p>
+ <label>Headline</label><input id="nHead" placeholder="Verified headline">
+ <label>Date / location</label><input id="nDate" placeholder="Date aur jagah">
+ <label>News details (sirf verified information)</label><textarea id="nBody" placeholder="Kya hua, kahan hua, official statement/source..."></textarea>
+ <label>Source / attribution</label><input id="nSource" placeholder="Source ka naam ya official statement">
+ <button class="btn" onclick="makeNews()">Poster text arrange karo</button><div class="output" id="nOut">News poster text yahan dikhega…</div><button class="btn secondary" onclick="copyText('nOut')">Copy</button><button class="btn secondary" onclick="saveOutput('News Poster Draft','nOut')">Notebook mein save</button>
+ <div class="notice">Publish karne se pehle date, spelling, names aur source ko dobara verify karein. Unverified allegation ko confirmed fact ki tarah na likhein.</div></div>
+</section>
+<section id="links" class="tool">
+ <div class="card"><h2>🔗 My Links / Product Shelf</h2><p class="sub">Apne product, Meesho ya social links save karein. Ye list isi browser/device par rahegi.</p>
+ <label>Link ka naam</label><input id="lName" placeholder="Jaise: Double bed mosquito net">
+ <label>Link URL</label><input id="lUrl" placeholder="https://...">
+ <div class="row"><div><label>Price (optional)</label><input id="lPrice" placeholder="₹199"></div><div><label>Type</label><select id="lType"><option>Product</option><option>Instagram</option><option>YouTube</option><option>Website</option><option>Other</option></select></div></div>
+ <button class="btn" onclick="addLink()">Link save karo</button><div id="linkList" class="items" style="margin-top:14px"></div>
+ <p class="muted">Note: Is version mein links aapke current browser ke local storage mein save hote hain, public website par dusre logon ko nahi dikhte.</p></div>
+</section>
+<section id="saved" class="tool">
+ <div class="card"><h2>📚 Prompt Notebook</h2><p class="sub">Yahan saved prompts/scripts milenge. Data isi browser mein save hota hai.</p><div id="savedList" class="items"></div><button class="btn secondary" onclick="clearSaved()">Notebook clear karo</button></div>
+</section>
+<div class="footer">Made for creators 💜 · Divyanshu AI Creator · Free starter version</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function go(tab){document.querySelectorAll('.tool').forEach(x=>x.classList.toggle('active',x.id===tab));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===tab));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
+function makePoster(){let topic=$('pTopic').value.trim()||'creative social media poster',text=$('pText').value.trim()||'No text provided',extra=$('pExtra').value.trim()||'clean composition, accurate details';$('pOut').textContent=`Create a ${$('pStyle').value} poster about: ${topic}.\nFormat: ${$('pRatio').value}.\nExact visible text (copy verbatim; preserve spelling): "${text}".\nVisual direction: professional composition, clear visual hierarchy, readable typography, polished lighting, high detail, balanced colors, no unnecessary clutter.\nAdditional requirements: ${extra}.\nDo not invent extra text, logos, dates, or facts. Ensure all text is correctly spelled and legible.`}
+const ideas={
+'Attitude':['मेरी खामोशी को कमजोरी मत समझना, जवाब वक्त देगा।','हम अपनी अहमियत जानते हैं, हर जगह साबित नहीं करते।','अंदाज़ अपना अलग है, इसलिए चर्चा थोड़ी ज़्यादा है।'],
+'Sad but strong':['कुछ बातें दिल में रह जाती हैं, और इंसान आगे बढ़ जाता है।','हर मुस्कान के पीछे कहानी हो, ज़रूरी तो नहीं।','जो सीख मिल गई, वो किसी किताब में नहीं थी।'],
+'Motivational':['धीरे चलो, लेकिन अपने सपनों की तरफ चलते रहो।','आज की मेहनत ही कल की पहचान बनेगी।','रास्ते मुश्किल हों तो हौसला और मजबूत रखो।'],
+'Romantic':['तेरी एक मुस्कान दिन को खास बना देती है।','कुछ लोग पास न होकर भी दिल के करीब रहते हैं।','बात छोटी सी है, मगर एहसास बहुत खास है।'],
+'Friendship':['दोस्ती नाम नहीं, मुश्किल वक्त में साथ निभाने का एहसास है।','यार कम हों, लेकिन दिल से हों।','हँसी अधूरी है अगर दोस्तों की टोली साथ न हो।'],
+'Village life':['मिट्टी की खुशबू में जो सुकून है, वो शहरों में कहाँ।','खेतों की राहें और अपनों की बातें—यही असली दौलत है।','गाँव की सुबह, मेहनत का दिन और सुकून की शाम।'],
+'Devotional':['श्रद्धा दिल में हो तो हर राह में उम्मीद मिलती है।','भरोसा रखो, अच्छे कर्म कभी व्यर्थ नहीं जाते।','भक्ति में सुकून है, और सुकून में शक्ति।']
+};
+function makeShayari(){let mood=$('sMood').value,topic=$('sTopic').value.trim(),arr=ideas[mood]||ideas.Attitude;let result=arr.map((x,i)=>`${i+1}. ${topic?x.replace(/[।]$/,'')+' — '+topic+'।':x}`).join('\n');if($('sLen').value==='Short')result=arr[0]+(topic?'\nTopic: '+topic:'');$('sOut').textContent=result;}
+function makeReel(){let t=$('rTopic').value.trim()||'your topic',d=$('rDur').value,st=$('rStyle').value,extra=$('rExtra').value.trim()||'show the main subject clearly';$('rOut').textContent=`REEL IDEA: ${t}\nStyle: ${st} | Duration: ${d}\n\nHOOK (first 2–3 sec): “Ruko, ye dekho…” — show the most interesting visual first.\nSCENE 1: Establish the place/topic with a clear wide shot.\nSCENE 2: Show 2–3 key moments or details. Extra details: ${extra}\nVOICEOVER: “Aaj hum aapko ${t} se judi kuch khaas baatein dikhane wale hain. End tak dekhiye aur apni rai comment mein batayein.”\nENDING: Finish with the strongest shot and a simple call to action: “Aapko kaisa laga? Share karein.”\nEDITING: Match cuts to music, keep captions readable, avoid misleading claims, and use music you have permission to use.`}
+function makeNews(){let h=$('nHead').value.trim()||'[Headline not provided]',d=$('nDate').value.trim()||'[Date/location not provided]',b=$('nBody').value.trim()||'[Verified details not provided]',s=$('nSource').value.trim()||'[Source not provided]';$('nOut').textContent=`NEWS POSTER\n\n${h.toUpperCase()}\n${d}\n\n${b}\n\nSource: ${s}\n\nNote: Details are based only on the supplied information. Verify all facts before publishing.`}
+function copyText(id){let txt=$(id).textContent;if(!txt||txt.includes('yahan dikhega'))return; if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(()=>alert('Copied!')).catch(()=>fallbackCopy(txt));}else fallbackCopy(txt)}
+function fallbackCopy(txt){let t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();alert('Copied!')}
+function saveOutput(title,id){let content=$(id).textContent;if(!content||content.includes('yahan dikhega')){alert('Pehle content banao.');return}let arr=JSON.parse(localStorage.getItem('dac_saved')||'[]');arr.unshift({title,content,at:new Date().toLocaleString()});localStorage.setItem('dac_saved',JSON.stringify(arr.slice(0,100)));alert('Notebook mein save ho gaya!');renderSaved()}
+function renderSaved(){let arr=JSON.parse(localStorage.getItem('dac_saved')||'[]');$('savedList').innerHTML=arr.length?arr.map((x,i)=>`<div class="item"><strong>${esc(x.title)}</strong><div class="muted">${esc(x.at)}</div><p>${esc(x.content.slice(0,260))}${x.content.length>260?'…':''}</p><button class="btn small secondary" onclick="copySaved(${i})">Copy</button><button class="btn small secondary" onclick="deleteSaved(${i})">Delete</button></div>`).join(''):'<div class="empty">Abhi kuch save nahi hai. Kisi tool se content bana kar “Notebook mein save” dabayein.</div>'}
+function copySaved(i){let arr=JSON.parse(localStorage.getItem('dac_saved')||'[]');let t=document.createElement('textarea');t.value=arr[i].content;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();alert('Copied!')}
+function deleteSaved(i){let arr=JSON.parse(localStorage.getItem('dac_saved')||'[]');arr.splice(i,1);localStorage.setItem('dac_saved',JSON.stringify(arr));renderSaved()}
+function clearSaved(){if(confirm('Saari saved entries delete karni hain?')){localStorage.removeItem('dac_saved');renderSaved()}}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function addLink(){let name=$('lName').value.trim(),url=$('lUrl').value.trim(),price=$('lPrice').value.trim(),type=$('lType').value;if(!name||!url){alert('Naam aur URL dono bharein.');return}if(!/^https?:\/\//i.test(url)){alert('URL https:// ya http:// se shuru hona chahiye.');return}let arr=JSON.parse(localStorage.getItem('dac_links')||'[]');arr.unshift({name,url,price,type});localStorage.setItem('dac_links',JSON.stringify(arr));$('lName').value='';$('lUrl').value='';$('lPrice').value='';renderLinks()}
+function renderLinks(){let arr=JSON.parse(localStorage.getItem('dac_links')||'[]');$('linkList').innerHTML=arr.length?arr.map((x,i)=>`<div class="item"><strong>${esc(x.name)}</strong> <span class="muted">· ${esc(x.type)} ${x.price?'· '+esc(x.price):''}</span><br><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.url)}</a><br><button class="btn small secondary" onclick="deleteLink(${i})">Remove</button></div>`).join(''):'<div class="empty">Abhi koi link save nahi hai.</div>'}
+function deleteLink(i){let arr=JSON.parse(localStorage.getItem('dac_links')||'[]');arr.splice(i,1);localStorage.setItem('dac_links',JSON.stringify(arr));renderLinks()}
+renderSaved();renderLinks();
+</script>
+</body>
+</html>
